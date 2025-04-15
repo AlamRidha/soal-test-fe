@@ -25,7 +25,9 @@ const UserProfileForm = () => {
 
   const addNewUser = () => {};
 
-  const removeUser = (userId) => {};
+  const removeUser = (userId) => {
+    users.filter((id) => userId !== id);
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
