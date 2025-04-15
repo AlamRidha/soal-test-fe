@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { CloseButton } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 
@@ -40,7 +41,7 @@ const ModalJoke = () => {
       </Button>
 
       <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
+        <Modal.Header>
           <Modal.Title>{joke}</Modal.Title>
         </Modal.Header>
         <Modal.Body>{punchline}</Modal.Body>
