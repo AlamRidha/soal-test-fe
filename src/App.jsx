@@ -42,13 +42,13 @@ function App() {
             value={text}
             onChange={handleOnChange}
           />
-          <button type="submit">Generate</button>
+          {/* <button type="submit">Generate</button> */}
         </form>
 
         {/* Modal */}
         <ModalJoke />
 
-        <UserProfileForm  />
+        <UserProfileForm />
       </div>
     </>
   );

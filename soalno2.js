@@ -6,13 +6,16 @@
 // ■ Input: katakLoncat(60) → Output: 20 Loncatan Besar dan 0 Loncatan Kecil
 // ■ Limit Soal: Tinggi tiang merupakan bilangan bulat positif.
 
-const katakLoncat = (lompatan) => {
-  let lompatanKecil = 1;
-  let lompatanBesar = 3;
+const katakLoncat = (tiang) => {
+  //   let totalLompatanKecil = 0;
+  //   let totalLompatanBesar = 0;
 
-  for (let i = 0; i <= lompatan; i++) {}
+  const lompatanBesar = Math.floor(tiang / 3);
+
+  const lompatanKecil = tiang % 3;
 
   return `${lompatanBesar} Loncatan Besar dan ${lompatanKecil} Loncatan Kecil`;
+  // return `${totalLompatanBesar} Loncatan Besar dan ${totalLompatanKecil} Loncatan Kecil`;
 };
 
-console.log(katakLoncat(28));
+console.log(katakLoncat(60));
