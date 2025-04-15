@@ -7,15 +7,11 @@
 // ■ Limit Soal: Tinggi tiang merupakan bilangan bulat positif.
 
 const katakLoncat = (tiang) => {
-  //   let totalLompatanKecil = 0;
-  //   let totalLompatanBesar = 0;
-
   const lompatanBesar = Math.floor(tiang / 3);
 
   const lompatanKecil = tiang % 3;
 
   return `${lompatanBesar} Loncatan Besar dan ${lompatanKecil} Loncatan Kecil`;
-  // return `${totalLompatanBesar} Loncatan Besar dan ${totalLompatanKecil} Loncatan Kecil`;
 };
 
-console.log(katakLoncat(60));
+console.log(katakLoncat(20));

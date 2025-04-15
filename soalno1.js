@@ -15,27 +15,30 @@ const randomNumber = () => {
   const arr = [];
 
   for (let i = 1; i <= 5; i++) {
-    let randomNumber = Math.floor(Math.random() * 100) + 1;
+    let randomNumber = Math.floor(Math.random() * 20) * 5 + 5;
     arr.push(randomNumber);
   }
 
+  console.log("Angka acak kelipatan 5 ", arr);
   return arr;
 };
 
 const pesan = (data) => {
-  const dataakhir = data.filter((data2) => data2 % 5 === 0);
-  let pesan = "";
-
-  if (dataakhir > 80) {
-    pesan = dataakhir + " Luar biasa";
-  } else if (dataakhir > 70 && dataakhir <= 80) {
-    pesan = dataakhir + " Baik";
-  } else if (dataakhir > 60 && dataakhir <= 70) {
-    pesan = dataakhir + "Cukup";
-  } else {
-    pesan = dataakhir + " Kurang";
+  const hasilPesan = [];
+  let keterangan = "";
+  for (const number of data) {
+    if (number <= 60) {
+      keterangan = "Kurang";
+    } else if (number > 60 && number <= 70) {
+      keterangan = "Cukup";
+    } else if (number > 70 && number <= 80) {
+      keterangan = "Baik";
+    } else {
+      keterangan = "Luar Biasa";
+    }
+    hasilPesan.push(`${number} ${keterangan}`);
   }
-  return pesan;
+  return hasilPesan;
 };
 
 // console.log(randomNumber().filter((data) => data % 5 === 0));

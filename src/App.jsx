@@ -3,10 +3,13 @@ import "./App.css";
 import axios from "axios";
 import ModalJoke from "./Component/Modal";
 import UserProfileForm from "./Component/UserProfileForm";
+import { Button } from "react-bootstrap";
 
 function App() {
   const [text, setText] = useState("");
   const [img, setImg] = useState();
+  const [toogle, setToogle] = useState(false);
+  const [toggleText, setToggleText] = useState("");
 
   const getPictRandom = async (text) => {
     try {
@@ -29,6 +32,10 @@ function App() {
     setText(e.target.value);
   };
 
+  const handleToggle = () => {
+    setToogle(!toogle);
+  };
+
   return (
     <>
       <div>
@@ -47,6 +54,12 @@ function App() {
 
         {/* Modal */}
         <ModalJoke />
+
+        <h3>{toogle ? "On" : "Off"}</h3>
+
+        <Button onClick={handleToggle} variant="secondary">
+          Click Toggle
+        </Button>
 
         <UserProfileForm />
       </div>
